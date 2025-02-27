@@ -1,125 +1,61 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>astoeb</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f9;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #002B5B; /* Темно-синий */
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-    }
-    h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    main {
-      padding: 20px;
-      text-align: center;
-    }
-    form {
-      max-width: 400px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
-    }
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1em;
-    }
-    button {
-      background-color: #002B5B; /* Темно-синий */
-      color: white;
-      border: none;
-      padding: 10px;
-      font-size: 1em;
-      border-radius: 4px;
-      cursor: pointer;
-      width: 100%; /* Кнопки во всю ширину */
-      margin: 5px 0; /* Отступ между кнопками */
-    }
-    button:hover {
-      background-color: #001F4D; /* Темнее оттенок синего */
-    }
-    .contact-buttons {
-      max-width: 400px; /* Ширина блока кнопок */
-      margin: 0 auto 20px; /* Центрирование и отступ снизу */
-    }
-    footer {
-      text-align: center;
-      padding: 10px 0;
-      background-color: #333;
-      color: white;
-    }
-    footer p {
-      margin: 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>astoeb</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>astoeb</h1>
-   
-  </header>
+    <div class="container">
+        <header>
+            <h1>astoeb</h1>
+            <p>astoeb.github.io</p>
+        </header>
 
-  <main>
-    <div class="contact-buttons">
-      <a href="mailto:#" style="text-decoration: none;">
-        <button><i class="fa fa-envelope"></i> Email</button>
-      </a>
-      <a href="https://t.me/#" target="_blank" style="text-decoration: none;">
-        <button><i class="fa fa-paper-plane"></i> Telegram</button>
-      </a>
-      <a href="https://wa.me/#" target="_blank" style="text-decoration: none;">
-        <button><i class="fa fa-whatsapp"></i> WhatsApp</button>
-      </a>
-      <a href="https://bastyon.com/#" target="_blank" style="text-decoration: none;">
-        <button><i class="fa fa-user"></i> Bastyon</button>
-      </a>
+        <section class="contacts">
+            <h2>Контакты</h2>
+            <ul class="contact-list">
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:example@email.com" class="contact-btn">Email</a>
+                </li>
+                <li>
+                    <i class="fab fa-telegram"></i>
+                    <a href="https://t.me/username" target="_blank" class="contact-btn">Telegram</a>
+                </li>
+                <li>
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/1234567890" target="_blank" class="contact-btn">WhatsApp</a>
+                </li>
+                <li>
+                    <i class="fas fa-shield-alt"></i>
+                    <a href="https://bastyon.com" target="_blank" class="contact-btn">Bastyon</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="contact-form">
+            <h2>Свяжитесь со мной</h2>
+            <form id="myForm" action="https://formspree.io/f/your-form-id" method="POST">
+                <div class="form-group">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Отправить</button>
+            </form>
+            <div id="success-message" class="hidden">Сообщение успешно отправлено!</div>
+        </section>
     </div>
-
-    <form action="https://formspree.io/f/xovjpabv" method="POST">
-      <label>
-        Ваше имя:
-        <input type="text" name="name" required>
-      </label>
-      <label>
-        Ваш email:
-        <input type="email" name="email" required>
-      </label>
-      <label>
-        Ваше сообщение:
-        <textarea name="message" rows="5" required></textarea>
-      </label>
-      <button type="submit">Отправить</button>
-    </form>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 astoeb. Все права защищены.</p>
-  </footer>
 </body>
 </html>
